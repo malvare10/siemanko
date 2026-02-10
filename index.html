@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Pulsujące koło</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+
+<script>
+let x = 200;
+let y = 200;
+let r = 50;      // UWAGA: w p5.js circle() bierze ŚREDNICĘ
+let speed = 5;
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(255);
+  circle(x, y, r);
+  r += speed;
+
+  if (r > 400 || r < 10) {
+    speed = -speed;
+  }
+}
+</script>
+
+</body>
+</html>
+
